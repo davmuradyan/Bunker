@@ -7,10 +7,6 @@ public class DataLoader : MonoBehaviour {
 
     void Start() {
         LoadData();
-
-        foreach (string profession in gameData.professions) {
-            Debug.Log(profession);
-        }
     }
 
     void LoadData() {
@@ -19,6 +15,7 @@ public class DataLoader : MonoBehaviour {
             string json = File.ReadAllText(path);
             gameData = JsonUtility.FromJson<GameData>(json);
             Debug.Log("Data loaded successfully!");
+            DontDestroyOnLoad(gameObject);
         } else {
             Debug.LogError("File not found: " + path);
         }
