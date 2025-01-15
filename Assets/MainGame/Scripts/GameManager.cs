@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,5 +29,9 @@ public class GameManager : MonoBehaviour
         edu.text = Data.education[Random.Range(0, Data.education.Count)];
         add.text = Data.additional_information[Random.Range(0, Data.additional_information.Count)];
         luggage.text = Data.luggage[Random.Range(0, Data.luggage.Count)];
+    }
+
+    public void OnGoBackClicked() {
+        SceneManager.LoadSceneAsync("StartPage");
     }
 }
