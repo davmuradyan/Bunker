@@ -8,7 +8,6 @@ public class GameData {
     public List<string> hobby;
     public List<string> phobia;
     public List<string> personality;
-    public List<string> education;
     public List<string> additional_information;
     public List<string> luggage;
 }
